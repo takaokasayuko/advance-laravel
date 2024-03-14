@@ -13,6 +13,7 @@ class AuthorController extends Controller
     {
         //Authorクラスのallメソッドを利用してauthorsテーブルから全件取得
         $authors = Author::all();
+        $authors = Author::Paginate(4);
         //データ全件が格納されたauthorsをパラメータとして渡し、index.blade.phpを呼び出す
         return view('index', ['authors' => $authors]);
     }

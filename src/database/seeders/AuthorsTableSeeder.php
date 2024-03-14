@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use App\Models\Author;
 
 class AuthorsTableSeeder extends Seeder
 {
@@ -12,8 +13,11 @@ class AuthorsTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run() //runメソッドにauthorsテーブルのシードを作成する処理
+
+    //runメソッドにauthorsテーブルのシードを作成する処理
+    public function run()
     {
+        /*
         $param = [
             'name' => 'tony',
             'age' => 35,
@@ -41,5 +45,9 @@ class AuthorsTableSeeder extends Seeder
             'nationality' => 'Chinese'
         ];
         DB::table('authors')->insert($param);
+        */
+
+        //3個データを作成
+        Author::factory()->count(3)->create();
     }
 }

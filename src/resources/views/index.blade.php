@@ -15,6 +15,11 @@
       background-color: #EEEEEE;
       text-align: center;
     }
+    svg.w-5.h-5 {
+      width: 30px;
+      height: 30px;
+    }
+
   </style>
   <!--親テンプレートdefault.blade.phpの@yield('title')にはめ込まれる-->
   @section('title', 'index.blade.php')
@@ -36,4 +41,5 @@
     </tr>
     @endforeach
   </table>
+  {{ $authors->links() }}
   @endsection
